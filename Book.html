@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Book Page</title>
+    <!-- <script src="book.js" defer></script> -->
+    <script src="book-slider.js" defer></script>
+    <script src="ham-menu.js" defer></script>
+  </head>
+  <body class="dark_background">
+    <div class="off-screen-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Info.html">Info</a></li>
+        <li><a href="Rooms.html">Rooms</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Book.html">Book</a></li>
+      </ul>
+    </div>
+
+    <nav>
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <div class="header_links wrapper m-t50px m-b100px">
+      <div class="header_logo">
+        <a href="index.html"><img src="img/Logo.png" alt="Logo" /></a>
+      </div>
+      <div class="nav">
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Info.html">Info</a></li>
+          <li><a href="Rooms.html">Rooms</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li class="active"><a href="Book.html">Book</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slides">
+      <!-- Slide1 start -->
+      <section class="wrapper book-first-slide m-b50px slide" id="slide1">
+        <div class="welcome_section m-b100px book-calendar">
+          <div class="text">
+            <div class="heading m-b5px">Book</div>
+            <div class="subheading m-b5px">Choose Your Room</div>
+
+            <div class="combo-box-container">
+              <!-- <label for="combo-box">Choose an option:</label> -->
+              <select id="combo-box" class="combo-box">
+                <option value="Room1">Room 1</option>
+                <option value="Room2">Room 2</option>
+                <option value="Room3">Room 3</option>
+              </select>
+            </div>
+
+            <div class="book_drop-down"></div>
+            <div class="book_room-Selected"></div>
+          </div>
+
+          <!-- Calendar -->
+          <div class="calendar">
+            <div class="calendar-wrapper">
+              <div class="calendar-header">
+                <button>
+                  <img src="img/Icons/Calendar-Arrow-Left.svg" alt="Arrow" />
+                </button>
+                <p id="date">june</p>
+                <button>
+                  <img src="img/Icons/Calendar-Arrow-rigth.svg" alt="Arrow" />
+                </button>
+              </div>
+              <div class="dates">
+                <div class="dates-row">
+                  <div class="day">01</div>
+                  <div class="day">02</div>
+                  <div class="day">03</div>
+                  <div class="day">04</div>
+                  <div class="day">05</div>
+                  <div class="day">06</div>
+                  <div class="day">07</div>
+                </div>
+
+                <div class="dates-row">
+                  <div class="day">08</div>
+                  <div class="day">09</div>
+                  <div class="day">10</div>
+                  <div class="day">11</div>
+                  <div class="day active-day">12</div>
+                  <div class="day">13</div>
+                  <div class="day">14</div>
+                </div>
+
+                <div class="dates-row">
+                  <div class="day">15</div>
+                  <div class="day">16</div>
+                  <div class="day">17</div>
+                  <div class="day">18</div>
+                  <div class="day">19</div>
+                  <div class="day">20</div>
+                  <div class="day">21</div>
+                </div>
+                <div class="dates-row">
+                  <div class="day">22</div>
+                  <div class="day">23</div>
+                  <div class="day">24</div>
+                  <div class="day">25</div>
+                  <div class="day">26</div>
+                  <div class="day">27</div>
+                  <div class="day">28</div>
+                </div>
+                <div class="dates-row">
+                  <div class="day">29</div>
+                  <div class="day">30</div>
+                </div>
+              </div>
+              <div class="times">
+                <div class="time">11:30am</div>
+                <div class="time">12:30pm</div>
+                <div class="time active-time">05:30pm</div>
+                <div class="time">09:30pm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-bottom b-bfst-page">
+          <button class="button" onclick="nextSlide()">Next</button>
+        </div>
+      </section>
+      <!-- Slide1 End -->
+
+      <!-- Slide2 start -->
+      <section
+        class="wrapper m-b30px book-second-slide m-b50px slide hide"
+        id="slide2"
+      >
+        <div class="text">
+          <div class="subheading m-b5px">How Many participants?</div>
+          <input class="m-b50px num-of-participants" type="number" value="1" />
+
+          <div class="subheading m-b5px">Your Info</div>
+
+          <div class="body">
+            If there more than one persons, we just one of you information. Rest
+            of you will be asked at frontdesk
+          </div>
+        </div>
+
+        <form class="book-form m-b100px" action="#">
+          <label class="book-form-body" for="name">Name</label>
+          <input type="text" id="name" value="John" />
+
+          <label class="book-form-body" for="Email">Email</label>
+          <input type="email" id="Email" value="john@gmail.com" />
+
+          <label class="book-form-body" for="Phone">Phone</label>
+          <input type="tel" id="Phone" value="555 555 5555" />
+        </form>
+
+        <div class="book-bottom">
+          <button class="button" onclick="previousSlide()">Back</button>
+          <button id="save-slide2" class="button" onclick="nextSlide()">
+            Next
+          </button>
+        </div>
+      </section>
+      <!-- Slide2 end -->
+
+      <!-- Slide3 Start -->
+      <section class="wrapper book-third-slide m-b50px slide hide" id="slide3">
+        <div class="welcome_section m-b100px d-b">
+          <div class="heading m-b5px">Review</div>
+
+          <div class="header_links book-calendar">
+            <div class="text">
+              <div class="subheading">Your Info</div>
+              <div class="book-form-body" id="Participant-number">
+                1 Participant
+              </div>
+              <div class="book-form-body" id="Name-Display">John</div>
+              <div class="book-form-body" id="Email-Display">
+                john@gmail.com
+              </div>
+              <div class="book-form-body" id="Phone-Display">555 555 5555</div>
+            </div>
+
+            <div class="book-page-side">
+              <div class="subheading">Appointment Info</div>
+              <div class="book-form-body" id="room-num">Room 1</div>
+              <div class="book-form-body" id="date-and-time">
+                June 12 5:30pm
+              </div>
+
+              <!-- <img src="img/Card_Third_Room.jpg" alt="Clown-picture" /> -->
+              <div class="book-form-body"></div>
+            </div>
+          </div>
+        </div>
+        <div class="book-bottom">
+          <button class="button" onclick="previousSlide()">Back</button>
+          <button id="save-slide3" class="button" onclick="nextSlide()">
+            Confirm
+          </button>
+        </div>
+      </section>
+      <!-- Slide3 End -->
+
+      <!-- Slide4 Start -->
+      <section class="wrapper book-third-slide m-b50px slide hide" id="slide4">
+        <div class="m-b100px">
+          <div class="heading m-b5px">Confirmation</div>
+
+          <div class="header_links book-calendar">
+            <div class="text">
+              <div class="subheading">Your Info</div>
+              <div class="book-form-body">John,</div>
+              <div class="book-form-body">See you on June 12, at 5:30pm</div>
+              <div class="book-form-body">Room 1</div>
+              <div class="book-form-body"></div>
+            </div>
+
+            <div class="book-page-side">
+              <div class="subheading">Appointment Info</div>
+              <div class="book-form-body"></div>
+
+              <!-- <img src="img/Card_Third_Room.jpg" alt="Clown-picture" /> -->
+              <div class="book-form-body"></div>
+            </div>
+          </div>
+        </div>
+        <div class="book-bottom b-bfst-page">
+          <a href="index.html" class="button">Home Page</a>
+        </div>
+      </section>
+      <!-- Slide4 End -->
+    </div>
+
+    <footer>
+      <div class="footer_container wrapper">
+        <div class="footer_links_container">
+          <ul class="footer_links">
+            <li class="m-b10px">Email: Clownphobia@gmail.com</li>
+            <li class="m-b10px">Phone: 511 345 22 21</li>
+            <li class="m-b10px">
+              Address: 31 Oklahoma Avenue Paramus, NJ 07652
+            </li>
+          </ul>
+          <div class="media_container">
+            <a href="#" class="media_link"
+              ><img src="img/Icons/Youtube.svg" alt="Youtube_icon"
+            /></a>
+
+            <a href="#" class="media_link"
+              ><img src="img/Icons/Facebook.svg" alt="Facebook_icon"
+            /></a>
+
+            <a href="#" class="media_link"
+              ><img src="img/Icons/Instgram.svg" alt="Instagram_icon"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-logo">
+          <a href="index.html" class="logo_footer m-b30px">
+            <img src="img/Logo.png" alt="Clownphobia"
+          /></a>
+
+          <a href="#" class="links">Terms and Conditions</a>
+        </div>
+
+        <div class="footer_navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Info.html">Info</a></li>
+            <li><a href="Rooms.html">Rooms</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Book.html">Book</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
